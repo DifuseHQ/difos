@@ -11,7 +11,7 @@
 #include "mt7986a.dtsi"
 
 / {
-	model = "Bananapi BPI-R3";
+	model = "DMSBG-100";
 	compatible = "bananapi,bpi-r3", "mediatek,mt7986a";
 
 	aliases {
