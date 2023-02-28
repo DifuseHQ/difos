@@ -1123,7 +1123,7 @@
 +bootmenu_confirm_return=askenv - Press ENTER to return to menu ; bootmenu 60
 +bootmenu_default=0
 +bootmenu_delay=0
-+bootmenu_title=      [0;34m( ( ( [1;39mOpenWrt[0;34m ) ) )  [0;36m[SD card][0m
++bootmenu_title=      [0;34m( ( ( [1;39mDifOS[0;34m ) ) )  [0;36m[SD card][0m
 +bootmenu_0=Initialize environment.=run _firstboot
 +bootmenu_0d=Run default boot command.=run boot_default
 +bootmenu_1=Boot system via TFTP.=run boot_tftp ; run bootmenu_confirm_return
@@ -1203,7 +1203,7 @@
 +bootmenu_confirm_return=askenv - Press ENTER to return to menu ; bootmenu 60
 +bootmenu_default=0
 +bootmenu_delay=0
-+bootmenu_title=      [0;34m( ( ( [1;39mOpenWrt[0;34m ) ) )  [0;36m[SPI-NOR][0m
++bootmenu_title=      [0;34m( ( ( [1;39mDifOS[0;34m ) ) )  [0;36m[SPI-NOR][0m
 +bootmenu_0=Initialize environment.=run _firstboot
 +bootmenu_0d=Run default boot command.=run boot_default
 +bootmenu_1=Boot system via TFTP.=run boot_tftp ; run bootmenu_confirm_return
@@ -1261,7 +1261,7 @@
 +bootmenu_confirm_return=askenv - Press ENTER to return to menu ; bootmenu 60
 +bootmenu_default=0
 +bootmenu_delay=0
-+bootmenu_title=      [0;34m( ( ( [1;39mOpenWrt[0;34m ) ) )  [0;36m[SPI-NAND][0m
++bootmenu_title=      [0;34m( ( ( [1;39mDifOS[0;34m ) ) )  [0;36m[SPI-NAND][0m
 +bootmenu_0=Initialize environment.=run _firstboot
 +bootmenu_0d=Run default boot command.=run boot_default
 +bootmenu_1=Boot system via TFTP.=run boot_tftp ; run bootmenu_confirm_return
@@ -1333,7 +1333,7 @@
 +bootmenu_confirm_return=askenv - Press ENTER to return to menu ; bootmenu 60
 +bootmenu_default=0
 +bootmenu_delay=0
-+bootmenu_title=      [0;34m( ( ( [1;39mOpenWrt[0;34m ) ) )  [0;36m[eMMC][0m
++bootmenu_title=      [0;34m( ( ( [1;39mDifOS[0;34m ) ) )  [0;36m[eMMC][0m
 +bootmenu_0=Initialize environment.=run _firstboot
 +bootmenu_0d=Run default boot command.=run boot_default
 +bootmenu_1=Boot system via TFTP.=run boot_tftp ; run bootmenu_confirm_return
