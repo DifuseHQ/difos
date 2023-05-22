@@ -15,7 +15,7 @@ define Device/airlink101_ar670w
   DEVICE_VENDOR := Airlink
   DEVICE_MODEL := AR670W
   IMAGE_SIZE := 3840k
-  KERNEL := $(KERNEL_DTB) | pad-to $$$$(BLOCKSIZE)
+  KERNEL := $(KERNEL_DTB) | pad-to $$(BLOCKSIZE)
   IMAGES += factory.bin
   IMAGE/factory.bin := $$(sysupgrade_bin) | check-size | \
 	wrg-header wrgn16a_airlink_ar670w
@@ -54,6 +54,7 @@ define Device/belkin_f5d8235-v1
   DEVICE_PACKAGES := kmod-switch-rtl8366s kmod-usb-ohci kmod-usb-ohci-pci \
 	kmod-usb2 kmod-usb2-pci kmod-usb-ledtrig-usbport
   SUPPORTED_DEVICES += f5d8235-v1
+  DEFAULT := n
 endef
 TARGET_DEVICES += belkin_f5d8235-v1
 
