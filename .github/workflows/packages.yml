@@ -19,6 +19,8 @@ on:
       - 'package/**'
       - 'target/linux/generic/**'
       - 'toolchain/**'
+    branches-ignore:
+      - master
 
 permissions:
   contents: read
@@ -43,6 +45,7 @@ jobs:
             subtarget: 64
     uses: ./.github/workflows/build.yml
     with:
+      container_name: toolchain
       target: ${{ matrix.target }}
       subtarget: ${{ matrix.subtarget }}
       build_kernel: true
