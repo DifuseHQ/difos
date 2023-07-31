@@ -1,0 +1,15 @@
+Signed-off-by: Hayzam Sherif <hayzam@gmail.com>
+---
+
+--- a/drivers/net/phy/sfp.c	2023-08-01 01:14:12.615415612 +0530
++++ b/drivers/net/phy/sfp.c	2023-08-01 01:14:48.803901917 +0530
+@@ -397,6 +397,10 @@
+ 		.vendor = "UBNT",
+ 		.part = "UF-INSTANT",
+ 		.modes = sfp_quirk_ubnt_uf_instant,
++	}, {
++		.vendor = "TSUHAN LTD.",
++		.part = "THMPRS4343GQA-DM",
++		.modes = sfp_quirk_2500basex,
+ 	}
+ };
