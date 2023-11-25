@@ -66,7 +66,8 @@ mercusys,mr90x-v1)
 	ubootenv_add_uci_config "$envdev" "0x0" "0x20000" "0x20000" "1"
 	;;
 cetron,ct3003|\
-netgear,wax220)
+netgear,wax220|\
+zbtlink,zbt-z8102ax)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x20000" "0x20000"
 	;;
 ubnt,unifi-6-plus)
@@ -79,6 +80,7 @@ xiaomi,redmi-router-ax6000-stock)
 	ubootenv_add_uci_sys_config "/dev/mtd2" "0x0" "0x10000" "0x20000"
 	;;
 h3c,magic-nx30-pro|\
+jcg,q30-pro|\
 qihoo,360t7|\
 tplink,tl-xdr4288|\
 tplink,tl-xdr6086|\
