@@ -1,33 +1,16 @@
-![OpenWrt logo](include/logo.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://i.imgur.com/pR97tbF.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://i.imgur.com/queGRtS.png">
+  <img alt="DifOS - Logo" src="https://i.imgur.com/queGRtS.png">
+</picture>
 
-OpenWrt Project is a Linux operating system targeting embedded devices. Instead
-of trying to create a single, static firmware, OpenWrt provides a fully
-writable filesystem with package management. This frees you from the
-application selection and configuration provided by the vendor and allows you
-to customize the device through the use of packages to suit any application.
-For developers, OpenWrt is the framework to build an application without having
-to build a complete firmware around it; for users this means the ability for
-full customization, to use the device in ways never envisioned.
+[![Build Status](https://ci.difuse.io/buildStatus/icon?job=DifOS)](https://ci.difuse.io/job/DifOS/) 
 
-Sunshine!
+DifOS is part of the Difuse Project, firmware that is based on OpenWrt and is available for use on DMSBG devices.
 
 ## Download
 
-Built firmware images are available for many architectures and come with a
-package selection to be used as WiFi home router. To quickly find a factory
-image usable to migrate from a vendor stock firmware to OpenWrt, try the
-*Firmware Selector*.
-
-* [OpenWrt Firmware Selector](https://firmware-selector.openwrt.org/)
-
-If your device is supported, please follow the **Info** link to see install
-instructions or consult the support resources listed below.
-
-## 
-
-An advanced user may require additional or specific package. (Toolchain, SDK, ...) For everything else than simple firmware download, try the wiki download page:
-
-* [OpenWrt Wiki Download](https://openwrt.org/downloads)
+Built firmware is available for download [here](https://gin.difuse.io/downloads).
 
 ## Development
 
@@ -37,10 +20,7 @@ case sensitive file system.
 
 ### Requirements
 
-You need the following tools to compile OpenWrt, the package names vary between
-distributions. A complete list with distribution specific packages is found in
-the [Build System Setup](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem)
-documentation.
+[Build System Setup](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem) is pretty much identical to that of OpenWRT. Below given are the common packages required to build the firmware.
 
 ```
 binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev
@@ -55,8 +35,8 @@ make4.1+ perl python3.7+ rsync subversion unzip which
 2. Run `./scripts/feeds install -a` to install symlinks for all obtained
    packages into package/feeds/
 
-3. Run `make menuconfig` to select your preferred configuration for the
-   toolchain, target system & firmware packages.
+3. Run `mv dmsbg100.config .config && make defconfig` to use the default
+   configuration for the DMSBG100 device.
 
 4. Run `make` to build your firmware. This will download all sources, build the
    cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen
@@ -69,40 +49,23 @@ different categories. All packages are installed via the OpenWrt package
 manager called `opkg`. If you're looking to develop the web interface or port
 packages to OpenWrt, please find the fitting repository below.
 
-* [LuCI Web Interface](https://github.com/openwrt/luci): Modern and modular
+* [LuCI Web Interface](https://github.com/DifuseHQ/luci): Modern and modular
   interface to control the device via a web browser.
 
-* [OpenWrt Packages](https://github.com/openwrt/packages): Community repository
+* [DifOS Packages](https://github.com/DifuseHQ/packages): Community repository
   of ported packages.
 
-* [OpenWrt Routing](https://github.com/openwrt/routing): Packages specifically
-  focused on (mesh) routing.
+* [DifOS Routing](https://github.com/DifuseHQ/routing): Packages specifically
+  focused on routing.
 
-* [OpenWrt Video](https://github.com/openwrt/video): Packages specifically
-  focused on display servers and clients (Xorg and Wayland).
-
-## Support Information
-
-For a list of supported devices see the [OpenWrt Hardware Database](https://openwrt.org/supported_devices)
-
-### Documentation
-
-* [Quick Start Guide](https://openwrt.org/docs/guide-quick-start/start)
-* [User Guide](https://openwrt.org/docs/guide-user/start)
-* [Developer Documentation](https://openwrt.org/docs/guide-developer/start)
-* [Technical Reference](https://openwrt.org/docs/techref/start)
+* [DifOS Telephony](https://github.com/DifuseHQ/telephony): Packages specifically
+  focused on telephony.
 
 ### Support Community
 
-* [Forum](https://forum.openwrt.org): For usage, projects, discussions and hardware advise.
-* [Support Chat](https://webchat.oftc.net/#openwrt): Channel `#openwrt` on **oftc.net**.
-
-### Developer Community
-
-* [Bug Reports](https://bugs.openwrt.org): Report bugs in OpenWrt
-* [Dev Mailing List](https://lists.openwrt.org/mailman/listinfo/openwrt-devel): Send patches
-* [Dev Chat](https://webchat.oftc.net/#openwrt-devel): Channel `#openwrt-devel` on **oftc.net**.
+* [Forum](https://forum.difuse.io): For usage, projects, discussions and hardware advice.
+* [Support Chat](https://discord.gg/u6RupFDMp9): Discord server for support and general discussion.
 
 ## License
 
-OpenWrt is licensed under GPL-2.0
+DifOS is licensed under GPL-2.0
